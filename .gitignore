@@ -21,3 +21,37 @@ node_modules
 
 # cli
 dist
+
+
+# 编译输出目录（Java 或其他）
+out/
+*.class
+
+# 环境变量文件（含真实密钥）
+.env
+.env.local
+packages/agent/.env
+
+# 构建产物（Vite 等）
+dist-ssr/
+
+# 日志文件
+*.log# 依赖和构建产物
+node_modules/
+dist/
+out/
+*.class
+
+# IDE 配置（忽略 .idea 等）
+.idea/
+.vscode/
+*.iml
+.DS_Store
+
+# 环境变量文件（不要提交真实密钥）
+.env
+.env.local
+packages/agent/.env
+
+# 日志
+*.log
