@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wsl bash *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(curl -s http://localhost:4000/)",
+      "Bash(curl -s -X POST http://localhost:4000/analyze -H \"Content-Type: application/json\" -d '{\"tokenIn\":\"ETH\",\"tokenOut\":\"USDC\",\"amount\":2.5}')",
+      "Read(///wsl.localhost/Ubuntu/home/gzq/my-new-dapp/packages/**)",
+      "Bash(npm install *)",
+      "Bash(yarn install *)",
+      "Read(///wsl.localhost/Ubuntu/home/gzq/my-new-dapp/packages/agent/node_modules/express/**)",
+      "Read(///wsl.localhost/Ubuntu/home/gzq/my-new-dapp/packages/agent/node_modules/cors/**)",
+      "Read(///wsl.localhost/Ubuntu/home/gzq/my-new-dapp/packages/agent/node_modules/ts-node-dev/**)",
+      "Read(///wsl.localhost/Ubuntu/home/gzq/my-new-dapp/packages/agent/node_modules/typescript/**)",
+      "Bash(yarn agent *)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "context7"
+  ]
+}

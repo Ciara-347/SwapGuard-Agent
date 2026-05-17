@@ -2833,6 +2833,14 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/swc-linux-x64-gnu@npm:^16.2.6":
+  version: 16.2.6
+  resolution: "@next/swc-linux-x64-gnu@npm:16.2.6"
+  checksum: 10/28e41b94f71f8aa187a69c9f5745ad6a26129cb088993d145ad129068bd5d2b0c8f2520d53293ed33bf0bb68502cb3eb9d9e322d9ab42716e9449d5581e19e83
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
 "@next/swc-linux-x64-musl@npm:15.2.5":
   version: 15.2.5
   resolution: "@next/swc-linux-x64-musl@npm:15.2.5"
@@ -4294,6 +4302,7 @@ __metadata:
   resolution: "@se-2/nextjs@workspace:packages/nextjs"
   dependencies:
     "@heroicons/react": "npm:~2.1.5"
+    "@next/swc-linux-x64-gnu": "npm:^16.2.6"
     "@rainbow-me/rainbowkit": "npm:2.2.9"
     "@react-native-async-storage/async-storage": "npm:~2.2.0"
     "@scaffold-ui/components": "npm:^0.1.10"
