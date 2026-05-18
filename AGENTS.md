@@ -49,6 +49,8 @@ yarn account             # View current account info
 # Deploy to live network
 yarn deploy --network <network>   # e.g., sepolia, mainnet, base
 
+yarn agent          # Start the Agent API server on port 4000
+
 yarn vercel:yolo --prod # for deployment of frontend
 ```
 
@@ -144,6 +146,22 @@ const { data: events, isLoading } = useScaffoldEventHistory({
 SE-2 also provides other hooks to interact with blockchain data: `useScaffoldWatchContractEvent`, `useScaffoldEventHistory`, `useDeployedContractInfo`, `useScaffoldContract`, `useTransactor`.
 
 **IMPORTANT: Always use hooks from `packages/nextjs/hooks/scaffold-eth` for contract interactions. Always refer to the hook names as they exist in the codebase.**
+
+### Agent Service
+
+- `packages/agent/` — Express + TypeScript backend providing swap analysis
+- Entry: `packages/agent/src/index.ts`
+- Port: `4000` (configurable via `PORT` env var)
+- CORS: allows `http://localhost:3000` by default
+
+**Endpoints:**
+
+| Method | Path       | Description                |
+|--------|------------|----------------------------|
+| GET    | `/`        | Health check               |
+| POST   | `/analyze` | Swap analysis (mock data)  |
+
+**POST `/analyze`** expects `{ tokenIn, tokenOut, amount }` — all fields required, amount must be positive. Returns `{ bestDex, slippage, mevRisk }` with mock data in MVP.
 
 ### UI Components
 
