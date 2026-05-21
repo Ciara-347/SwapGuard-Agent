@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import type { NextPage } from "next";
 
-const AGENT_URL = process.env.NEXT_PUBLIC_AGENT_URL || "http://localhost:4000";
+const AGENT_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 
 type MevRisk = "LOW" | "MEDIUM" | "HIGH";
 
